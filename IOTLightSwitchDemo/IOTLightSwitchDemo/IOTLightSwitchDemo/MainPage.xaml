@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="IOTLightSwitchDemo.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IOTLightSwitchDemo"
+             BackgroundColor="#333">
+
+    <Grid>
+        <StackLayout Padding="10" BackgroundColor="#222" Orientation="Horizontal" VerticalOptions="Start">
+
+            <Label HorizontalOptions="Start" Text="Light IP:" TextColor="LightGray" VerticalOptions="Center" />
+            <Label x:Name="LightIpLabel"
+                   HorizontalOptions="FillAndExpand"
+                   Text="None"
+                   TextColor="White"
+                   VerticalOptions="Center" />
+            <Button BackgroundColor="#625F5F"
+                    Clicked="Scan_Clicked"
+                    HorizontalOptions="End"
+                    Text="Scan"
+                    TextColor="White" />
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="Center" Spacing="30" VerticalOptions="Center">
+
+            <BoxView x:Name="LightBox" HeightRequest="100" WidthRequest="100" Color="Gray" />
+            <Button x:Name="ToggleButton"
+                    BackgroundColor="#36366F"
+                    BorderColor="Black"
+                    BorderRadius="50"
+                    BorderWidth="1"
+                    Clicked="Toggle_Clicked"
+                    HeightRequest="100"
+                    IsEnabled="False"
+                    Text="Toogle Light"
+                    TextColor="White" />
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>
